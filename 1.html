@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperatura</title>
+</head>
+<body>
+    <form action="">
+        digite a temperatura em graus Celsius: <br/>
+        <input type="number" id="celsius"/>
+        <br/><br/>
+        <button type="button" onclick="calcular()"> coneverter </button>
+    </form>
+    <div id="resposta"></div>
+
+    <script>
+        function calcular(){
+            //obter a temperatura em fahrenheit
+            var celsius = document.getElementById("celsius").value;
+            //converta para real
+            celsius = parseInt(celsius);
+            //calcular a temperatura em fahrenheit
+            var fahrenheit = (celsius * 9/5) + 32;
+            //saida
+            document.getElementById("resposta").innerHTML = "temperatura em fahrenheit:" + fahrenheit;
+            
+        }
+    </script>
+
+</body>
+</html>
+
+<!--Você está no Brasil, e para temperatura usamos o grau Celsius.
+Porém, quando você for contrato para trabalhar como programador JavaScript 
+no exterior, deverá usar graus Fahrenheit.-->
